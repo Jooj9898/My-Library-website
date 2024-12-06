@@ -1,0 +1,258 @@
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    background-image: url('library-background2.png'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Footer Styling */
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Main Content Area */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.container {
+    width: 50%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Book and Reservation Box Styling */
+.book-item {
+    flex: 1 1 calc(20% - 15px); /* Adjusts width dynamically for up to 5 items per row */
+    max-width: 250px; /* Prevents boxes from growing too wide */
+    min-width: 230px; /* Sets a minimum width for consistency */
+    border: 1px solid #ddd; /* Light border for the box */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Add space inside the box */
+    background-color: #fff; /* White background for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Flexible layout for consistent spacing */
+    flex-direction: column; /* Ensures content stacks vertically */
+    justify-content: space-between; /* Space content evenly */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+.book-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.book-item p {
+    margin: 5px 0; /* Consistent spacing between lines */
+}
+
+/* List of books or reservations */
+.book-list {
+    display: flex;
+    flex-wrap: wrap;         /* Ensure books wrap into rows */
+    gap: 15px;               /* Space between book items */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: stretch;    /* Make sure items stretch to equal height */
+}
+
+
+/* Form Styling */
+.search-form {
+    margin-top: 20px;
+}
+
+.search-form .form-group {
+    margin-bottom: 15px;
+}
+
+.search-form .form-group input,
+.search-form .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination .page-link {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #007BFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.pagination .page-link:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.pagination .current-page {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Handler Messages */
+.handler-message,
+.info-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.info-message {
+    background-color: #fffbcc;
+    border: 1px solid #ffeb3b;
+    color: #856404;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #31373b;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #31373b;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 3px solid #005fa3;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Header title styling */
+header h1 {
+    margin-left : 50px;
+    margin-right: 180px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Account and logout section */
+.username {
+    float: left;
+    color: white;
+    background-color: #0c1317;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.logout {
+    float: right;
+    color: white;
+    background-color: #31373b;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.logout:hover {
+    text-decoration: underline;
+    background-color: #0c1317;
+    color: #ffdd57;
+}
+.button {
+    background-color: #444444; /* Blue background */
+    color: white;              /* White text */
+    border: none;              /* No border */
+    padding: 4px 8px;        /* Padding for better clickability */
+    border-radius: 5px;        /* Rounded corners */
+    font-size: 1rem;           /* Slightly larger font */
+    cursor: pointer;          /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+}
+
+/* Button Hover Effect */
+.button:hover {
+    background-color: #1d1c1c; /* Darker blue on hover */
+}
+.search-button {
+    width: 100%;
+    background-color: #444444; /* Blue background */
+    color: white;              /* White text */
+    border: none;              /* No border */
+    padding: 4px 8px;        /* Padding for better clickability */
+    border-radius: 5px;        /* Rounded corners */
+    font-size: 1rem;           /* Slightly larger font */
+    cursor: pointer;          /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+}
