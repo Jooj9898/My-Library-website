@@ -10,7 +10,7 @@ Users can:
 - ❌ **Unreserve** books at will.
 - 🚪 **Logout** easily after their session.
 
-## 🧑‍💻 User Authentication
+## User Authentication
 - Users can **log in** to their account or **register** as a new user.
 - Registration automatically adds the user to the database.
 
